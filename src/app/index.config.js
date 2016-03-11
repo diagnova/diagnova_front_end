@@ -7,11 +7,11 @@
 
   /** @ngInject */
   function config($logProvider, $httpProvider, toastr,  $locationProvider,$validationProvider, RestangularProvider) {
-    RestangularProvider.setBaseUrl('https://surveyapi.herokuapp.com/');
+    RestangularProvider.setBaseUrl('https://giepiloto.herokuapp.com/');
     //RestangularProvider.setBaseUrl('http://localhost:3002/');
     RestangularProvider.setFullResponse(true);
    delete $httpProvider.defaults.headers.common["X-Requested-With"];
-    window.sr = new scrollReveal();
+    
 
     // Enable log
     $logProvider.debugEnabled(true);

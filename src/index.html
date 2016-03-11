@@ -5,7 +5,8 @@
     <title>preguntas</title>
     <meta name="description" content="">
  
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -25,8 +26,25 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">Usted esta usando un explorador <strong>muy antiguo</strong>. Por favor <a href="http://browsehappy.com/">Actualice su explorador</a> Para Mejorar su experiencia en este sitio.</p>
     <![endif]-->
-<acme-navbar  ></acme-navbar>
-    <div ui-view></div>
+ <div ng-hide="hide_menu">
+ <acme-navbar  class="visible-xs-block visible-sm-block"></acme-navbar>
+    <div class="main-nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1" >
+                <i ng-click="hide_tabs = !hide_tabs" class="glyphicon glyphicon-menu-hamburger vertical-hider" style="color: blue;    position: relative; top: 70px; font-size: 24px;"></i>
+            </div>
+            <div class="wrapper  col-md-11 "> 
+                <a ng-href="diagnova"><div class="logo-colored"></div></a>
+            </div>
+
+        </div>
+    </div>
+        
+    </div>
+</div>
+
+    <div class="main-content" ui-view></div>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
@@ -43,11 +61,16 @@
     <!-- angular templates will be automatically converted in js and inserted here -->
     <!-- endinject -->
     <!-- endbuild -->
- <div class="row">
-     <sponsors class="col-sm-12"></sponsors>    
- </div>
-  <div class="footer col-xs-12 text-center">
-        <p>© 2015 GIE. Todos los Derechos Reservados |   <a href="#" >Instrumento de caracterización de la actividad innovadora</a> </p>
+<!-- <div class="row">
+     <sponsors class="col-sm-12"></sponsors>  
+ </div>-->  
+ <div class="row footer"> 
+  <div class="col-xs-6 text-center">
+        <h3 class="copyright">© 2016 DIAGNOVA. Todos los Derechos Reservados</h3>
+    </div>
+     <div class=" col-xs-6 text-center">
+        <div class="logo-dark"></div>
+    </div>
     </div>
   </body>
 </html>

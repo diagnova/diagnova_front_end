@@ -1,0 +1,324 @@
+#imi-results .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #2C2C2C;
+}
+
+.colorear {
+position: relative;
+/* Estas dos propiedades sólo sirven para centrar */
+display: table;
+margin:0 auto;
+}
+/* Y esta para evitar el margin automático de Blogger en los enlaces */
+.colorear a {
+margin: 0 !important;
+}
+.colorear:before, {
+content: "";
+display: block;
+position: absolute;
+/* Todas las posiciones a cero */
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(255,102,0, 0.5); /*Sepia*/
+}
+.colorear:hover:before {
+background: none;
+}
+
+.tabs_vertical {
+    border: 1px solid black;
+    /* padding: 0px; */
+    margin: 0px;
+    height: 650px;
+    background-color: #C9C9FF;
+    padding: 0;
+        padding-top: 30px;
+}
+#pages .tab-menu-item:hover{
+background-color: orange;
+}
+.menu-item{
+  height: 30px;
+
+}
+.tab-menu-item{
+  height: 30px;
+}
+.menu-item:hover{
+  background-color: orange;
+  
+}
+#pages tab-heading {
+    color: blue;
+}
+#pages .panel-body {
+     padding: 0px; 
+}
+
+#pages li.col-md-12 {
+    padding: 0px;
+    min-width: 235px;
+        min-height: 40px;
+}
+#pages li.col-md-12:first-child {
+     margin-top: 95px;
+}
+
+#pages .tabs-left {
+    padding: 0px;
+}
+
+#pages.nav-tabs {
+    background: white;
+    color: black;
+}
+#pages .content-wrapper{
+  margin-top: 0px;
+}
+
+#pages .nav-tabs {
+    background: white;
+    color: black;
+}
+
+.ico-diagnova{
+width: 30px;
+margin-right: 15px;
+
+}
+.no-pad-marg {
+
+  padding: 0px;
+  margin:0px;
+}
+
+#pages .wrapper{
+    height:700px!important;
+}
+
+#diagnova .logo-orange {
+  width: 311px;
+  height: 76px;
+  margin-top: 30px;
+    margin-bottom: 30px;
+
+  background-size: 100%;
+}
+#diagnova .logo-ico {
+  width: 318px;
+  height: 357px;
+
+
+  background-size: 100%;
+}
+#diagnova{
+  font-size: 22px;
+  line-height: 1em;
+text-align: justify;
+}
+
+#diagnova.btn-success:not(.btn-link):not(.btn-flat) {
+    background-color: #003DFF!important;
+    color: rgba(255, 255, 255, 0.84);
+}
+#diagnova.btn-success:hover:not(.btn-link):not(.btn-flat) {
+    background-color: #59b75c!important;
+}
+
+.ico{
+    width: 69px;
+    height: 77px;
+    color: #FF630D;
+    top: 10px;
+    position: relative;
+
+}
+
+
+
+.diagnova-title p, .diagnova-title i{
+  display: inline-block ;
+  background-size: 100%;
+}
+.diagnova-title {
+    margin: 40px 0px;
+}
+
+ .text{
+
+  display: inline-block;
+    color:  #FF630D;
+    font-size: 44px;
+}
+ .btn-normal{
+    height: 70px;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: none;
+    white-space: normal;
+    padding:  0px;
+    background-color: blue!important;
+    color: white!important;
+    background: rgba(138,164,242,1);
+background: -moz-linear-gradient(top, rgba(138,164,242,1) 0%, rgba(0,61,255,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(138,164,242,1)), color-stop(100%, rgba(0,61,255,1)));
+background: -webkit-linear-gradient(top, rgba(138,164,242,1) 0%, rgba(0,61,255,1) 100%);
+background: -o-linear-gradient(top, rgba(138,164,242,1) 0%, rgba(0,61,255,1) 100%);
+background: -ms-linear-gradient(top, rgba(138,164,242,1) 0%, rgba(0,61,255,1) 100%);
+background: linear-gradient(to bottom, rgba(138,164,242,1) 0%, rgba(0,61,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8aa4f2', endColorstr='#003dff', GradientType=0 );
+}
+ .btn-normal:hover{
+    height: 70px;
+    border-radius: 50px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: none;
+    white-space: normal;
+    padding:  0px;
+    background-color: orange!important;
+    color: white!important;
+    background: rgba(255,175,75,1);
+background: -moz-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,98,13,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,98,13,1)));
+background: -webkit-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,98,13,1) 100%);
+background: -o-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,98,13,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,98,13,1) 100%);
+background: linear-gradient(to bottom, rgba(255,175,75,1) 0%, rgba(255,98,13,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff620d', GradientType=0 );
+}
+
+.services-wrapper{
+  padding:  0px 20px;
+}
+.services-subtitles{
+margin-bottom: 20px;
+}
+.services-subtitles p{
+    font-size:  24px;
+}
+.services-descriptions{
+  text-align:   justify;  
+  text-justify: inter-word;
+  height: 743px;
+}
+.services-title {
+margin-bottom: 40px;
+}
+/* Floating Shadow Pseudoelement */
+  .image-shadow a:after { 
+    content:'';
+    display: block;
+    position: absolute;
+    left: 12%;
+    bottom: 0px;
+    width: 80%;
+    max-width: 210px;
+    height: 10px;
+    background: transparent;
+    border-radius: 100px/50px;
+    box-shadow: 0 35px 40px rgba(0,0,0,0.5);
+  }
+  .services-images{
+    margin-bottom:  80px;
+  }
+
+.service-1 {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../../assets/service1.png") no-repeat;
+  background-size:100% auto!important;
+  padding-bottom: 40px; /* Needed to make room for the shadow */
+}
+.service-2 {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../../assets/service2.png") no-repeat;
+  background-size:100% auto!important;
+}
+.service-3 {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../../assets/service3.png") no-repeat;
+  background-size:100% auto!important;
+}
+.service-4 {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../../assets/service4.png") no-repeat;
+  background-size:100% auto!important;
+}
+.service-title {
+    height: 60px;
+}
+
+.service-box{
+  width: 230px;
+  height: 230px;
+  display: inline-block;
+}
+.services-descriptions {
+    text-align: justify;
+    text-justify: inter-word;
+    height: 745px;
+}
+ /* iPads (portrait and landscape) ----------- */ 
+
+@media screen and (max-width: 720px) {
+.tabs_vertical{
+     display: none;
+}
+.vertical-hider{
+  display:none;
+}
+  #pages .nav-tabs {
+    
+    display: none;
+  }
+  .services-descriptions{
+    text-align:   justify;  
+    text-justify: inter-word;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+      .services-descriptions{
+    text-align:   justify;  
+    text-justify: inter-word;
+    height: 1232px;
+  }
+    #pages .nav-tabs {
+    
+    display: none;
+  }
+  .btn-normal {
+    font-size:18px;
+  }
+    .btn-normal:hover {
+    font-size:18px;
+  }
+  .service-box {
+    width: 179px;
+    margin-top:   10px;
+    height: 230px;
+    display: inline-block;
+}
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+ 
+}
+
+@media screen and (min-width: 1441px) {
+    
+} 

@@ -1,0 +1,62 @@
+<div class="row" style="padding: 3px">
+    <div class="wrapper col-xs-12 col-md-12 " id="pages">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper ">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 ">
+                    <div class="">
+                        <div class=" ">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-2 tabs_vertical" ng-hide="hide_tabs">
+                                    <tabs vertical="true" data="tabData" type="tabs" template-url="app/Pages/pages-tab-tpl.html" /></tabs>
+                                </div>
+                                <div ng-class="{'col-md-9': hide_tabs == false}">
+                                    <ui-view></ui-view>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--    <div class="question_bg">
+            <img src="assets/images/questions_bg.png" alt="bg">
+        </div>-->
+                </div>
+            </div>
+            <!-- /.content-wrapper -->
+        </div>
+        <!-- ./wrapper -->
+    </div>
+</div>
+
+ 
+<!--
+  <tabset class="tabs-left col-sm-12" collapse="isCollapsed">
+                            <tab class="col-md-12" ng-repeat="page in pageCtrl.pages" active="page.active" ng-click="pageCtrl.setTitle(sessions[page.key].title)" >
+                                <tab-heading class="row no-pad-marg" >
+									<div class="col-xs-4 no-pad-marg text-right">
+										<img class="ico-diagnova" src="assets/{{sessions[page.key].title}}.png">
+									</div>
+									<div class="col-xs-8 no-pad-marg">
+										 {{sessions[page.key].title}}
+									</div>
+                               
+                                    <!--<span ng-show="sessions[page.key].unAnswered<=0" class="label label-success "><p class="glyphicon glyphicon-ok"></p></span>
+                                 <span ng-show="sessions[page.key].showUnaswered>0" class="badge">{{sessions[page.key].unAnswered}}</span></tab-heading>
+                                <fieldset>
+                                    <legend>
+                                       
+                                        
+                                    </legend>
+                                     <ng-include src="'app/Pages/nodes/'+sessions[page.key].title+'.html'" class="my-fade-animation"></ng-include>
+                                   
+                                    <div class="col-md-offset-3 col-md-6 text-center">
+                                        <br>
+                                        <br>
+                 
+                                    </div>
+                                </fieldset>
+                                <!--        <div class="row" style="margin-top:10px">
+                                    <h4>Active pane:</h4>
+                                    <pre>{{pageCtrl.tabActive()}}</pre>
+                                </div>
+                            </tab>
+                        </tabset>-->

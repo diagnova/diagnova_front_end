@@ -8,11 +8,17 @@
     /** @ngInject */
     function runBlock($log, $anchorScroll, $rootScope, $location, $cookies, auth, $state) {
         $anchorScroll.yOffset = 50;
-        $log.debug('runBlock end');
+        $rootScope.hide_tabs = false;
+    
         $log.debug('cookies en run', $cookies);
         //Redirect to login if route requires auth and you're not logged in
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
+            if ($location.path() == 'login') {
+                $rootScope.hide_menu = true;
 
+            }else{
+                $rootScope.hide_menu = false;
+            };
             var isLogin = toState.name === "login";
             if (isLogin) {
                 return; // no need to redirect 
@@ -33,6 +39,7 @@
             }
 
         });
+            $log.debug('runBlock end');
     }
 
 

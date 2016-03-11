@@ -7,8 +7,8 @@
 
     /** @ngInject */
 
-    function LoginController(auth, $scope, $cookies, $cookieStore, $location, $state, toaster) {
-
+    function LoginController(auth, $scope, $cookies, $cookieStore, $location, $state, toaster,$rootScope) {
+        $rootScope.hide_menu = true;
 
         var vm = this;
         vm.isBusy = false;
@@ -60,7 +60,7 @@
             auth.login($scope.session).then(function(data) {
                 if (data != null) {
                     $scope.user_id = data;
-                    $state.go('instrumentos');
+                    $state.go('pages.diagnova');
                 } else {
                    
                     toaster.pop('info', "Información:", "Usuario no registrado, o contraseña invalida");
@@ -86,7 +86,7 @@
             $scope.session.session.password = $scope.user.user.password;
             auth.singup($scope.user.user).then(function(data) {
                 if (data != null) {
-                    $state.go('icai');
+                   $state.go('pages.diagnova');
                 } else {
                     vm.isBusy = false;
                     toaster.pop('info', "Información:", "Usuario ya existe");

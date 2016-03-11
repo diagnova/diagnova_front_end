@@ -1,76 +1,86 @@
-
 <div class="top-content">
-    
-            <!-- Top content -->
-            <div class="inner-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text-center">
-                            <h2 class="text-center"><strong></strong>Implementación de un programa de gestión de la innovación empresarial para fortalecer las Pymes de sectores estratégicos en el Departamento del Atlántico</h2>
+    <div class="inner-bg row">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="image-replacement principal col-centered"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <p class="text-center slogan"><strong></strong>La cultura de la innovación comienza con un diagnóstico de tus capacidades</p>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                 <h2 class="registrate">Registrate y Diagnóvate en línea</h2>
+                    <div class="form-bottom sample shadow-z-2">
+                    <form class="login-form" name="Form" role="form" ng-submit="submit()">
+                        <div class="form-group">
+                            <label class="sr-only" for="form-username">E-Mail</label>
+                            <input type="text" name="form-username" placeholder="Ej.: mail@mail.com..." class="form-username form-control" id="form-username" ng-model="user.user.email" validator="email" email-error-message="Ingrese un Email valido" success-message=" ">
                         </div>
-                       
-                               
-                            
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6  col-sm-offset-3 form-box ">
-                            <div class="form-top sample shadow-z-2">
-                                <div class="form-top-left text-center">
-                                    <h3>Instrumento de caracterización de la actividad innovadora</div>
-                              
-                                <div class="form-top-left">
-                                     <p>  <i class="glyphicon glyphicon-lock"></i> Ingrese su E-mail y contraseña para ingresar</p>
-                                </div>
-                            </div>
-                            <div class="form-bottom sample shadow-z-2">
-                                <form class="login-form" name="Form" role="form" ng-submit="submit()">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-username">E-Mail</label>
-                                        <input type="text" name="form-username" placeholder="mail@mail.com..." class="form-username form-control" id="form-username" ng-model="user.user.email"   validator="email" email-error-message="Ingrese un Email valido"  success-message=" ">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-password">Contraseña</label>
-                                        <input type="password" name="form-password" placeholder="Contraseña..." class="form-password form-control" id="form-password" ng-model="user.user.password"  validator="minlength=4" lenght-error-message="Minimo 4 letras o digitos"  email-success-message=" ">
-                                    </div>
-                                    <button ng-click="ingresar(Form)" v-busy="login.isBusy" v-busy-label="Cargando..." v-pressable ng-disabled="!Form.$valid" class="btn btn-success">Ingresar</button>
-                                    <button ng-click="registrar()" v-busy="login.isBusy" v-busy-label="Cargando..." v-pressable ng-disabled="!Form.$valid" class="btn btn-info" >Registrarse</button>
-                                    
-
-                                </form>
-                                 <p class="h4 text-center"><a href="#" ng-click="passReset()"> Recuperar contraseña </a></p>  
-                            </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-password">Contraseña</label>
+                            <input type="password" name="form-password" placeholder="Contraseña..." class="form-password form-control" id="form-password" ng-model="user.user.password" validator="minlength=4" lenght-error-message="Minimo 4 letras o digitos" email-success-message=" ">
                         </div>
+                        <div class="col-sm-6">
+                              <button ng-click="ingresar(Form)" v-busy="login.isBusy" v-busy-label="Cargando..." v-pressable ng-disabled="!Form.$valid" class="btn btn-success">Ingresar</button>
+                        </div>
+                        <div class="col-sm-6">
+                           <button ng-click="registrar()" v-busy="login.isBusy" v-busy-label="Cargando..." v-pressable ng-disabled="!Form.$valid" class="btn btn-info">Registrarse</button> 
+                        </div>
+                      
+                        
+                    </form>
 
-                    </div>
-                            <div class="account col-xs-12 text-center  ">
-             <br>
-             <br>
-               
-             
-        </div>
-                    
-
-                    <div class="row">
-                    <toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'animation-class': 'toast-top-right'}"></toaster-container>
-                        <!-- <div class="col-sm-6 col-sm-offset-3 social-login">
-                            <h3>...O ingrese con:</h3>
-                            <div class="social-login-buttons">
-                                <a class="btn btn-link-2" href="#">
-                                    <i class="fa fa-facebook"></i> Facebook
-                                </a>
-                                <a class="btn btn-link-2" href="#">
-                                    <i class="fa fa-twitter"></i> Twitter
-                                </a>
-                                <a class="btn btn-link-2" href="#">
-                                    <i class="fa fa-google-plus"></i> Google Plus
-                                </a>
-                            </div>-->
+                        <p class="text-center"><a href="#" ng-click="passReset()"> Recuperar contraseña </a></p>
                     </div>
                 </div>
             </div>
+           <!-- <div class="row others">
+                <div class="col-sm-12 text-center">
+                   <p>registrate usando</p>
+                </div>
+                <div class="col-sm-6">
+                     
+                </div>
+                <div class="col-sm-6">
+                    3
+                </div>
+                <div class="col-sm-12 text-center">
+                                            <button ng-click="registrar()" v-busy="login.isBusy" v-busy-label="Cargando..." v-pressable ng-disabled="!Form.$valid" class="btn btn-lg btn-info" >Registrarse <i class="glyphicon glyphicon-menu-right"></i></button>
+                    
+                </div>
+                
+            </div>
+-->
+            <div class="account col-xs-12 text-center  ">
+                <br>
+                <br>
+                
+                
+            </div>
+            
+            <div class="row">
+                <toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'animation-class': 'toast-top-right'}"></toaster-container>
+                <!-- <div class="col-sm-6 col-sm-offset-3 social-login">
+                    <h3>...O ingrese con:</h3>
+                    <div class="social-login-buttons">
+                        <a class="btn btn-link-2" href="#">
+                            <i class="fa fa-facebook"></i> Facebook
+                        </a>
+                        <a class="btn btn-link-2" href="#">
+                            <i class="fa fa-twitter"></i> Twitter
+                        </a>
+                        <a class="btn btn-link-2" href="#">
+                            <i class="fa fa-google-plus"></i> Google Plus
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+        </div>
         
-
-  
-</div>
-
-   
+        
+    </div>

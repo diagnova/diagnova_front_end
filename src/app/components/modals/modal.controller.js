@@ -87,14 +87,14 @@
         Restangular.all('referrers').post({
             referrers: vm.referrers
         });
-        $state.go("instrumentos");
+        $state.go("pages.imiResult");
         $modalInstance.close();
         
     };
 
     $scope.cancel = function() {
         $modalInstance.dismiss('cancel');
-        $state.go("instrumentos");
+        $state.go("pages.imiResult");
     };
 }
 

@@ -23,6 +23,20 @@
     /** @ngInject */
     function NavbarController( auth) {
       var vm = this;
+      vm.navbarCollapsed = true;
+       vm.tabData   = [
+      {
+        heading: 'diagnova',
+        route:   'pages.diagnova',
+        title: 'Diagnova'
+      },
+      {
+        heading: 'diagnovate',
+        route:   'pages.diagnovate',
+        title: 'diagnovate'
+      }
+    ];
+
         vm.isLogged = function(){
 
           return auth.isLogged();

@@ -1,0 +1,123 @@
+.table-nonfluid {
+   width: auto !important;
+}
+.tab-imi  {
+    display: none;
+}
+.dimension_radar_item {
+    text-transform: capitalize;
+}
+#imi fieldset {
+    width: auto;
+    border: 0px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+#imi .tabs-left {
+    border-right: 0px solid #ddd;
+}
+#imi li.col-md-12.tab-imi.ng-isolate-scope.active {
+    display: none;
+}
+
+.text-title{
+	font-size:55px;
+	padding: 0px 39px;
+	line-height: 1em;
+}
+
+#instrumento-mindex p{
+font-size:22px;
+}
+
+span.ui-slider-line {
+    font-size: 24px;
+    font-weight: bold;
+}
+ 
+ .number-big{
+ 	font-size:128px!important;
+ 	text-align:right;
+ 	font-weight: bold;
+ 	color: #666666;
+ }
+
+ /* iPads (portrait and landscape) ----------- */	
+
+@media screen and (max-width: 720px) {
+    	/* Styles */
+ 	.number-big{
+		 	font-size:22px!important;
+		 	text-align:right;
+		 	font-weight: bold;
+		 	color: #666666;
+ 	}
+
+ 	.text-title{
+ 		font-size:20px;
+		line-height: 1em;
+		padding: 10px;
+		text-align: center;
+ 	} 
+ 	span.ui-slider-line {
+    	font-size: 10px;
+    	font-weight: bold;
+	}
+	slider span.bubble {
+    	font-size: 10px;
+    	line-height: 5.3em;
+    /* font-family: sans-serif; */
+    	text-align: center;
+    	text-shadow: none;
+    	top: -1.3em;
+    	cursor: pointer;
+    	font-weight: bold;
+	}
+	#instrumento-mindex p {
+    font-size: 15px;
+    text-align: left;
+	}
+	.rainbow-slider {
+    	margin-top: 10px;
+    /* margin-bottom: 14px; */
+	}
+	.ui-slider-line-pip {
+    	
+    	height: 30px;
+    	position: absolute;
+    	left: 50%;
+    	top: -30px;
+	}
+	.pips {
+        margin-top: 43px;
+            position: relative!important;
+
+   }
+   .panel-body {
+     padding: 0px; 
+
+	}
+	.main-nav .logo-colored {
+    width: 280px;
+    height: 84px;
+    margin-top: 30px;
+    background-size: 100%;
+    margin: 0 auto;
+	}
+	#pages .nav-tabs {
+    
+    display: none;
+	}
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+    
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    
+}
+
+@media screen and (min-width: 1441px) {
+    
+}	

@@ -8,31 +8,35 @@
     /** @ngInject */
     function routeConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('icai', {
-                url: '/icai',
-                templateUrl: 'app/InstrumentoICAI/icai.html',
-                controller: 'IcaiController',
-                controllerAs: 'icaiCtrl',
-                authenticate: true
-            })
-            .state('imi', {
+            .state('pages.imi', {
                 url: '/imi',
                 templateUrl: 'app/InstrumentoIMI/imi.html',
                 controller: 'ImiController',
                 controllerAs: 'imiCtrl',
-                authenticate: false
-            }).state('acap', {
-                url: '/acap',
-                templateUrl: 'app/InstrumentoACAP/acap.html',
-                controller: 'AcapController',
-                controllerAs: 'acapCtrl',
                 authenticate: true
-            })
-            .state('instrumentos', {
-                url: '/instrumentos',
-                templateUrl: 'app/Instrumentos/Instrumentos.html',
-                controller: 'InstrumentsController',
-                controllerAs: 'instCtrl',
+            }).state('pages.imiResult', {
+                url: '/imi/resultados',
+                templateUrl: 'app/InstrumentoIMI/ImiResult.html',
+                controller: 'ImiController',
+                controllerAs: 'imiCtrl',
+                authenticate: true
+            }).state('pages', {
+                url: '/diagnova_pages',
+                templateUrl: 'app/Pages/diagnova.html',
+                controller: 'PagesController',
+                controllerAs: 'pageCtrl',
+                authenticate: true
+            }).state('pages.diagnova', {
+                url: '/diagnova',
+                templateUrl: 'app/Pages/nodes/diagnova.html',
+                controller: 'PagesController',
+                controllerAs: 'pageCtrl',
+                authenticate: true
+            }).state('pages.diagnovate', {
+                url: '/diagnovate',
+                templateUrl: 'app/Pages/nodes/diagnovate.html',
+                controller: 'PagesController',
+                controllerAs: 'pageCtrl',
                 authenticate: true
             }).state('login', {
                 url: '/login',

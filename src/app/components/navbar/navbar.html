@@ -1,29 +1,20 @@
-<nav class="navbar navbar-static-top navbar-warning skin-black-light shadow-z-2" data-sr='ease up 30% wait 0.5s '>
-  <div class="container"> 
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" ng-href="#caracterizacion">
-         <img class="img-responsive" alt="Brand" src="assets/logo.png">
+      <button type="button" class="navbar-toggle" ng-click="vm.navbarCollapsed = !vm.navbarCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <!-- your branding here -->
       </a>
     </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-      <ul class="nav navbar-nav  navbar-right">
-    
-        <!--<li><a ng-href="#caracterizacion" >Caraterización</a></li>-->
-          <!--  <li><a ng-href="#home">Inicio</a></li>
-        <li><a ng-href="#home">Salir</a></li>-->
-        <!--<li  ng-show = "!vm.isLogged()"><a  ng-href="#login">Login</a></li>-->
-        
-        <li ng-show="vm.isLogged()"><a ng-href="#instrumentos" >Instrumentos <i class="ion ion-ios-list-outline"></i></a></li>
-        <li ng-show="vm.isLogged()"><a ng-href="#logout" ng-click="vm.logout()">Salir <i class="ion ion-log-out"></i></a></li>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" collapse="vm.navbarCollapsed">
 
-        
-      
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right acme-navbar-text">
-        <li></li>
-      </ul>
+    <tabs vertical="true" data="vm.tabData" type="tabs" template-url="app/Pages/pages-tab-tpl.html" /></tabs>
     </div>
-  </div>
 </nav>

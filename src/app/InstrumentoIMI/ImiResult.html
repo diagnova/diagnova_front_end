@@ -1,0 +1,85 @@
+<div class="container-fluid" id="imi-results" >
+    
+    <div class="row">
+        <div ng-class="{'col-md-12': hide_tabs == false}">
+            <div class="">
+                
+                <div class=" ">
+                    <div class="row">
+                        <div class="col-sm-12 text-center ">
+                            <div class="logo-certifica">
+                                <img src="assets/certifica.png">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-6 ">
+                            <h2 class="text-center">Medición de la innovación</h2>
+                            <canvas id="radar"  class="chart chart-radar" chart-colours ="chart_colours"
+                                        chart-data="dimensiones_calculadas" chart-labels="labels" chart-options="chart_options">
+                                    </canvas> 
+                            <table class="table table-bordered">
+                
+                                <tbody>
+                                    <tr ng-repeat="(nombre_dimension, dimension) in dimensiones.resultados">
+                                        <td class="dimension_radar_item col-xs-2" >
+                                            <p>{{nombre_dimension}}</p>
+                                        </td>
+                                        <td>
+                                            <p>{{dimension}}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6 text-center" >
+                            <h2>Tipo de innovación</h2>
+                            <canvas style="margin-bottom:30px" id="pie" class="chart chart-pie"
+                            chart-data="pie_data" chart-labels="pie_labels" chart-legend=true chart-options="pie_options">
+                            </canvas>
+                            <table class="table table-bordered table-condensed" >
+              
+                                <tbody>
+                                    <tr ng-repeat="(nombre_tipo, tipo) in tipo_innovacion" ng-class="{'success': mayor_innovacion[0] == nombre_tipo}">
+                                        <td class="dimension_radar_item "  >
+                                            <p >{{nombre_tipo}}</p>
+                                        </td>
+                                        <td>
+                                            <p>{{tipo}}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p>Su empresa podra acelerar su velocidad de innovación si enfoca su proximo proyecto en este tipo de innovacion: {{mayor_innovacion}}</p>
+                             
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <div class="panel-footer">
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 ">
+                                <!-- Default panel contents
+                                <div>Comuníquese con cualquiera de nuestros consultores a las siguientes líneas telefónicas: 301 485 1346 - 301 485 1536 - 300 265 8510 - 301 485 1421 - 301 485 1567 - 301 484 9940.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <!--    <div class="question_bg">
+            <img src="assets/images/questions_bg.png" alt="bg">
+        </div>-->
+    </div>
+    <div class="row">
+    <div class="text-center">
+         <img src="assets/logos.png">
+    </div>
+        
+    </div>
+     
+</div>

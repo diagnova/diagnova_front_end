@@ -60,12 +60,13 @@ img { max-width: 100%; }
 
 /***** Top content *****/
 
-.inner-bg {
-    padding: 0;
-}
 
+.top-content {
+	height: 100%;
+}
 .top-content .text {
 	color: #fff;
+
 }
 
 .top-content .text h1 { color: #fff; }

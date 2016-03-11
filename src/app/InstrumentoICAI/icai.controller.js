@@ -130,7 +130,7 @@
 
 
         $scope.get_user_mail = function() {
-            return $cookies.email;
+            return $cookies.get("email");
         };
 
         function compare(a, b) {

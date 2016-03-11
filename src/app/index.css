@@ -1,9 +1,169 @@
-    |.browsehappy {
+ 
+p {
+    font-size: 1.4em;
+    line-height: 1em;
+}
+
+.image-replacement, .logo {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../assets/logo.png") no-repeat;
+  background-size:100% auto;
+ 
+}
+.logo-colored {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../assets/logo-colored.png") no-repeat;
+  background-size:100% auto;
+ 
+}
+/* Align vertically a column */
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.logo-orange {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../assets/logo-orange.png") no-repeat;
+  background-size:100% auto;
+ 
+}
+.diagnova-ico {
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../assets/diagnova-ico.png") no-repeat;
+  background-size:100% auto;
+ 
+}
+.diagnovate-ico {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../assets/diagnovate-ico.png") no-repeat;
+  background-size:100% auto;
+ 
+}
+
+.logo-ico {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../assets/logo-ico.png") no-repeat;
+  background-size:100% auto;
+ 
+}
+.image-replacement-dark, .logo-dark {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url("../assets/logo-dark.png") no-repeat;
+ 
+}
+
+.copyright{
+    color: #808080;
+    margin-top: 10px;
+    font-size: 22px;
+
+}
+ 
+.main-nav .logo-colored {
+    width: 314px;
+    height: 84px;
+    margin: 17px auto;
+    background-size: 100%;
+}
+.footer .logo-dark{
+  max-width: 320px;
+  height: 90px;
+  width: 100%;
+  margin: 0 auto;
+  background-size: 100%;
+}
+    /* H1 - H6 font */
+.main-nav{
+
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #1A1A1A;
+    height: 140px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6, a,p{
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif!important;
+}
+
+
+
+@media screen and (max-width: 720px) {
+.main-nav .logo-colored {
+ 
+ margin: 0 auto;
+ 
+}
+.footer .logo-dark {
+    width: 180px;
+    height: 90px;
+    top: 22px;
+    /* margin: 38px auto; */
+    /* background-size: 100%; */
+    position: relative;
+}
+.copyright {
+    color: #808080;
+    margin-top: 10px;
+    font-size: 20px;
+}
+}
+
+@media screen and (min-width: 721px) and (max-width: 1280px) {
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+    
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+    
+}
+
+@media screen and (min-width: 1921px) {
+    
+}
+    .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
 }
+.footer{
+    padding: 10px;
+    background-color: #1A1A1A;
+    height: 140px;
+}
+.main-content{
+    height:100%;
+    
+
+}
+
 
 .thumbnail {
     height: 200px;
@@ -16,8 +176,9 @@
 body {
     background-color: white;
     font-size: 13px;
-    font: normal 13px arial, sans-serif;
-    background-image: url("../assets/bgs/bg2.jpg");
+    font:  13px arial, sans-serif;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif!important;
+    /**background-image: url("../assets/bgs/DIAGNOVA CO.png");**/
 }
 
 .question_bg {
@@ -123,7 +284,7 @@ fieldset {
 
 .tabs-left > .nav-tabs {
     float: left;
-    margin-right: 19px;
+    margin-right: 0px;
     border-right: 1px solid #ddd;
 }
 
@@ -321,18 +482,24 @@ input.ng-valid {
     }
 
 
-
+.pointer.low {
+   z-index: 2!important;
+}
+input.input.low{
+z-index: 4!important;   
+}
 
 /*dddddddddddddd*/
 .rainbow-slider {
-  background: linear-gradient(to right, #ff4c4c 0%, #f7f733 50%, #3be240 100%);
+  background: linear-gradient(to right, red 0%, #f7f733 50%, #3be240 100%);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 30px;
   border: none;
   /*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);*/
   position:     relative;
-  height: 5px; }
+  margin-top: 90px;
+  height: 20px; }
                     
   .rainbow-slider .ui-slider-handle {
     background: rgba(255, 255, 255, 0.21);
@@ -374,7 +541,7 @@ input.ng-valid {
     slider {
         display:     block;
         position:    relative;
-        height:      30px;
+        height:      40px;
         
     }
     slider span.bar {
@@ -396,28 +563,28 @@ input.ng-valid {
         background: #a00;
         opacity:    0.5;
     }
-    slider span.pointer {
-      top: -9px;
+ slider span.pointer {
+    top: -6px;
     z-index: 2;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    background-color: #6B6B6B       ;
+    background-color: #EEEEEE;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
-        border: 2px solid white;
-    }
-    slider span.pointer:after {
+    border-radius: 20px;
+    border: 2px solid #939090;
+}
+slider span.pointer:after {
     position: absolute;
-     top: 6px;
-    left: 6px;
-    width: 4px;
-    height: 4px;
-    background: #ffffff;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: rgba(44, 62, 80, 0.35);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    border-radius: 4px;
+    border-radius: 10px;
     content: '';
 }
     slider span.pointer:hover {
@@ -425,16 +592,18 @@ input.ng-valid {
     }
     slider span.pointer.active { background-color: #2C3E50
     }
-    slider span.bubble {
+   slider span.bubble {
+    font-size: 24px;
+    line-height: 3em;
+    /* font-family: sans-serif; */
+    text-align: center;
+    text-shadow: none;
+    top: -1.3em;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-        font-size:   0.7em;
-        line-height: 1.4em;
-        font-family: sans-serif;
-        text-align:  center;
-        text-shadow: none;
-        top:         -1.3em;
-        cursor:      pointer;
-    }
+
     slider span.bubble.selection, slider span.bubble.limit {
         top: 25%;
     }
@@ -467,13 +636,13 @@ slider>input {
 }
 
 
- .ui-slider-line-pip {
-         background: #999;
-    width: 1px;
-    height: 5px;
+.ui-slider-line-pip {
+    background: rgb(0, 0, 0);
+    width: 2px;
+    height: 30px;
     position: absolute;
     left: 50%;
-    top: -7px;
+    top: -29px;
 }
  .ui-slider-line {
  
@@ -501,7 +670,9 @@ slider>input {
 }
 
    .pips {
-        margin-top: 25px;
+        margin-top: 63px;
+            position: relative!important;
+
    }
  ::-ms-tooltip {
         display: none;
@@ -518,9 +689,9 @@ slider>input {
     background: #212121;
 }
  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    color: orange!important;
-    background-color: #ffffff!important;
-    border: 1px solid #ecf0f1!important;
+    color: white!important;
+    background-color: #FF630D!important;
+    border: 1px solid #FF630D!important;
     border-bottom-color: transparent!important;
     cursor: default!important;
 }

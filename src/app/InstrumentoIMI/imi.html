@@ -1,18 +1,8 @@
-<div class="container-fluid ">
-    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1400px; height: 200px;">
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1400px; height: 200px;">
-            <div><img u="image" src="assets/images/image1.jpg" /></div>
-            <div><img u="image" src="assets/images/image2.jpg" /></div>
-            <div><img u="image" src="assets/images/image3.jpg" /></div>
-        </div>
-    </div>
-    <div class="row" style="margin-top:30px" id="survey">
-        <a name="survey" href></a>
-        <div class="col-md-10 col-md-offset-1 ">
-            <p>Responda las siguientes preguntas. Puede guardar su progreso haciendo clic en guardar.</p>
-        </div>
-    </div>
+
+ 
+<div class="container-fluid " id="imi">
+     
+
     <!--
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -33,31 +23,22 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-10 col-md-offset-1 ">
-            <div class="panel panel-primary panel-opacity">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h3 class="panel-title">{{imiCtrl.panelTitle}}</h3>
-                        </div>
-                        <div class="col-md-8">
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-body">
+        <div class="col-md-12 " >
+            <div class="">
+ 
+                <div class=" ">
                     <form name="characterizationForm" class="form-horizontal" role="form" novalidate>
-                        <p>Bienvenido {{get_user_mail()}} </p>
+                       
                         <tabset class="tabs-left col-sm-12">
-                            <tab class="col-md-12" ng-repeat="page in imiCtrl.pages" active="page.active" ng-click="imiCtrl.setTitle(sessions[page.key].title)">
+                            <tab class="col-md-12 tab-imi" ng-repeat="page in imiCtrl.pages" active="page.active" ng-click="imiCtrl.setTitle(sessions[page.key].title)">
                                 <tab-heading>{{sessions[page.key].title}}
-                <div >
-                    <canvas id="radar" width="500" height="500" class="chart chart-radar"
+                    <!--  <div >
+              <canvas id="radar" width="500" height="500" class="chart chart-radar"
                       chart-data="dimensiones" chart-labels="labels" chart-options="chart_options">
                     </canvas> 
 
                 </div>
-                                    <!--<span ng-show="sessions[page.key].unAnswered<=0" class="label label-success "><p class="glyphicon glyphicon-ok"></p></span>
+                              -->      <!--<span ng-show="sessions[page.key].unAnswered<=0" class="label label-success "><p class="glyphicon glyphicon-ok"></p></span>
                                  <span ng-show="sessions[page.key].showUnaswered>0" class="badge">{{sessions[page.key].unAnswered}}</span>--></tab-heading>
                                 <fieldset>
                                     <legend>
@@ -98,18 +79,19 @@
                     </form>
                 </div>
 
+<!--
                 <div class="panel-footer">
  
                     <div class="container">
 
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 ">
-                                <!-- Default panel contents -->
+                                <!-- Default panel contents 
                                 <div>Comuníquese con cualquiera de nuestros consultores a las siguientes líneas telefónicas: 301 485 1346 - 301 485 1536 - 300 265 8510 - 301 485 1421 - 301 485 1567 - 301 484 9940.</div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <!--    <div class="question_bg">
@@ -148,34 +130,10 @@
     </div>
 
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="ok()">Enviar</button>
-        <button class="btn btn-success" type="button" ng-click="cancel()">Finalizar</button>
+        <button class="btn btn-primary" type="button" ng-click="ok()">Enviar Invitaciones</button>
+        <button class="btn btn-success" type="button" ng-click="cancel()">Terminar</button>
     </div>
  
 
     </script>
-<script>
-jQuery(document).ready(function($) {
-    var options = {};
-    var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 
-    //responsive code begin
-    //you can remove responsive code if you don't want the slider scales
-    //while window resizes
-    function ScaleSlider() {
-        var parentWidth = $('#slider1_container').parent().width();
-        if (parentWidth) {
-            jssor_slider1.$ScaleWidth(parentWidth);
-        } else
-            window.setTimeout(ScaleSlider, 30);
-    }
-    //Scale slider after document ready
-    ScaleSlider();
-
-    //Scale slider while window load/resize/orientationchange.
-    $(window).bind("load", ScaleSlider);
-    $(window).bind("resize", ScaleSlider);
-    $(window).bind("orientationchange", ScaleSlider);
-    //responsive code end
-});
-</script>

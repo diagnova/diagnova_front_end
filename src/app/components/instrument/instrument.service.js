@@ -7,8 +7,9 @@
 
     /** @ngInject */
     function instrument($log, $http, Restangular) {
-        var apiHost = 'https://surveyapi.herokuapp.com/';
+        var apiHost = 'https://giepiloto.herokuapp.com/';
         //var apiHost = 'http://localhost:3002/';
+         var local_answers = {};
         var answers_structs = {
 
             "icai": {
@@ -180,7 +181,18 @@
                     p17: "", //p4
                     p18: "", //p4
                     p19: "", //p4
-                    p20: "" //p4
+                    p20: "", //p4
+                    p21: "", //p4
+                    p22: "", //p4
+                    p23: "", //p4
+                    p24: "", //p4
+                    p25: "", //p4
+                    p26: "", //p4
+                    p27: "", //p4
+                    p28: "", //p4
+                    p29: "", //p4
+                    p30: "", //p4
+
                 }
             },
             "acap":{
@@ -276,6 +288,8 @@
                     } else {
                         return new_answers; //si no se ha realizado el insturmento
                     }
+                }else{
+                      return getInSessions(new_answers, local_answers); //for debug porpouses
                 }
 
                 return new_answers;
@@ -341,10 +355,10 @@
 
 
         function setAnswers(type, user_id, answers_new) {
-
+                local_answers = answers_new;
                 var data_to = {
                     answers: {
-                        user_id: user_id
+                        user_id: user_id.toString()
                     }
                 }
             if (user_id != "" && answers_new != null) {
@@ -360,7 +374,7 @@
 
                 });
             } else {
-                return false;
+                return local_answers;
             }
             $log.debug("insertando el user_id:" + user_id + " como: " + data_to + " en " + apiHost + type, data_to);
             //return $http.post(apiHost+type, data_to).

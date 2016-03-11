@@ -8,12 +8,12 @@
 
 .navbar {
 	margin-bottom: 0px; 
-    background-image: url("../assets/material1.jpg");
-    background-image: url("../../../assets/material1.jpg");
+   /* background-image: url("../assets/material1.jpg");
+    background-image: url("../../../assets/material1.jpg");*/
 }
  
 .navbar-primary .navbar { background:#9f58b5; border-bottom:none; }
-.navbar-primary .navbar .nav > li > a {color: #501762;}
+.navbar-primary .navbar .nav > li > a {color: white ;}
 .navbar-primary .navbar .nav > li > a:hover {color: #fff; background-color: #8e49a3;}
 .navbar-primary .navbar .nav .active > a,.navbar .nav .active > a:hover {color: #fff; background-color: #501762;}
 .navbar-primary .navbar .nav li > a .caret, .tnav .navbar .nav li > a:hover .caret {border-top-color: #fff;border-bottom-color: #fff;}
@@ -58,13 +58,13 @@
 
 }
 .navbar-default .navbar-nav>li>a {
-    color: black;
+    color: white    ;
     /*background-color: rgb(66, 91, 117);*/
 }
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
     color: rgba(255, 255, 255, 1);
-    background-color:  rgb(253, 214, 95);
+    background-color:  rgba(255,99,13,1);
 }
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
@@ -113,5 +113,24 @@
 
 .nav-tabs>li>a {
     
-    color: black!important;
+    color: #003DFF!important;
+    font-size: 20px;
 }
+.navbar.navbar, .navbar-default.navbar{
+    background-color    : #1A1A1A;
+}
+.navbar-default .navbar-nav>li>a{
+
+}
+div.navbar-collapse.collapse {
+        display: block;
+        overflow: hidden;
+        max-height: 0px;
+        -webkit-transition: max-height .3s ease;
+        -moz-transition: max-height .3s ease;
+        -o-transition: max-height .3s ease;
+        transition: max-height .3s ease;
+    }
+    div.navbar-collapse.collapse.in {
+        max-height: 2000px;
+    }

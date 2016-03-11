@@ -7,8 +7,8 @@
 
     /** @ngInject */
     function auth($http, $log, $cookies, Restangular) {
-        var apiLogIn = 'http://surveyapi.herokuapp.com/session/signin';
-        var apiSingUp = 'http://surveyapi.herokuapp.com/users/signup';
+        var apiLogIn = 'https://giepiloto.herokuapp.com/session/signin';
+        var apiSingUp = 'https://giepiloto.herokuapp.com/users/signup';
         var user = {};
         var token = null;
 
@@ -27,7 +27,7 @@
         return service;
 
         function getUser() {
-            return $cookies.user_id;
+            return $cookies.get("user_id");
         }
         function getUserByToken(token) {
             return Restangular.all('users').customGET("user_id",{token:token});
@@ -49,10 +49,10 @@
             function getAnswersComplete(response) {
                 if (response.status == 200) {
                     if (response.data.user.auth_token != null) {
-                        $cookies.user_id = response.data.user.id;
-                        $cookies.token = response.data.user.auth_token;
-                        $cookies.email = response.data.user.email;
-                        return $cookies.user_id;
+                        $cookies.put("user_id",  response.data.user.id);
+                        $cookies.put("token",  response.data.user.auth_token);
+                        $cookies.put("email",  response.data.user.email);
+                        return $cookies.get("user_id");
                     } else {
                         return null;
                     }
@@ -80,11 +80,11 @@
                     if (response.data.user.auth_token != null) {
                         $log.debug('logged as', response.data);
 
-                        $cookies.user_id = response.data.user.id;
-                        $cookies.token = response.data.user.auth_token;
-                        $cookies.email = response.data.user.email;
+                        $cookies.put("user_id" , response.data.user.id);
+                        $cookies.put("token" , response.data.user.auth_token);
+                        $cookies.put("email" , response.data.user.email);
                         $log.debug('cokies as', $cookies);
-                        return $cookies.user_id;
+                        return $cookies.get("user_id");
                     } else {
                         return null;
                     }
@@ -113,11 +113,11 @@
                     if (response.data.user.auth_token != null) {
                         $log.debug('logged as', response.data);
 
-                        $cookies.user_id = response.data.user.id;
-                        $cookies.token = response.data.user.auth_token;
-                        $cookies.email = response.data.user.email;
-                        $log.debug('cokies as', $cookies);
-                        return $cookies.user_id;
+                        $cookies.put("user_id" , response.data.user.id);
+                        $cookies.put("token" , response.data.user.auth_token);
+                        $cookies.put("email" , response.data.user.email);
+                        //$log.debug('cokies as', $cookies);
+                        return $cookies.get("user_id");
                     } else {
                         return null;
                     }
@@ -138,9 +138,9 @@
         function logout(data) {
             //$log.debug("entro a logo con la info: ", data);
             //var data = {characterization:{user_id:5}}
-            delete $cookies["user_id"];
-            delete $cookies["token"];
-            delete $cookies["email"];
+            delete $cookies.get("user_id");
+            delete $cookies.get("token");
+            delete $cookies.get("email");
 
             //reload
             // $state.go('login', {}, { reload: true });
@@ -149,7 +149,7 @@
 
         function isLogged() {
           //  $log.debug('entro a islogged', $cookies);
-            if ($cookies["user_id"]) {
+            if ($cookies.get("user_id")) {
                 return true;
             } else {
                 return false;
